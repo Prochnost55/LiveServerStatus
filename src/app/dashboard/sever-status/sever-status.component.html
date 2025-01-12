@@ -1,4 +1,15 @@
-<div>
+<!--
+    The server status component is a simple component that displays the current status of the server.
+    The component uses a CSS class binding to apply different styles based on the current status.
+    The component also uses an if-else statement to display different messages based on the current status.
+-->
+
+<div id="status" [class]="{
+    status: true,
+    'status-online': currentStatus === 'online',
+    'status-offline': currentStatus === 'offline',
+    'status-unknown': currentStatus !== 'online' && currentStatus !== 'offline'
+}">
     @if (currentStatus === 'online') {
     <p>Servers are online</p>
     <p>All systems are operational.</p>

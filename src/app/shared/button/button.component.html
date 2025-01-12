@@ -1,4 +1,14 @@
+<!--
+    Here we are using ng-content to project the content of the parent component.
+    We have two ng-content tags in the button component. The first one is used to project the content of the parent component.
+    The second one is used to project the content of the parent component that has the class icon.
+    This is how we can project content conditionally.
+    We can use the select attribute to select the content based on the class or tag name.
+-->
+
 <span>
     <ng-content />
 </span>
-<ng-content select=".icon"></ng-content>
+<span class="icon">
+    <ng-content select="icon" />
+</span>

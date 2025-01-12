@@ -1,18 +1,19 @@
 <form action="">
-    <p>
-        <label for="title">Title</label>
+    <app-form-control title="Title">
         <input type="text" name="title" id="title" />
-    </p>
-    <p>
-        <label for="request">Request</label>
+    </app-form-control>
+    <app-form-control title="Request">
         <textarea rows="3" name="request" id="request"></textarea>
-    </p>
+    </app-form-control>
     <p>
         <button appButton>
             Submit
-            <span class="icon">
-                ⌲
-            </span>
+            <span ngProjectAs="icon">⌲</span>
         </button>
     </p>
 </form>
+
+<!-- 
+    ngProjectAs is used for advanced content projection. 
+    
+    -->
