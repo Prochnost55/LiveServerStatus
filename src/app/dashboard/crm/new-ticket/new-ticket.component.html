@@ -1,9 +1,9 @@
-<form action="">
+<form (ngSubmit)="onSubmit(titleInput.value, requestInput.value)" #form>
     <app-form-control title="Title">
-        <input type="text" name="title" id="title" />
+        <input type="text" name="title" id="title" #titleInput/> 
     </app-form-control>
     <app-form-control title="Request">
-        <textarea rows="3" name="request" id="request"></textarea>
+        <textarea rows="3" name="request" id="request" #requestInput></textarea>
     </app-form-control>
     <p>
         <button appButton>
@@ -16,4 +16,7 @@
 <!-- 
     ngProjectAs is used for advanced content projection. 
     
-    -->
+    #titleInput is a template reference variable.
+    A template reference variable is a variable that you can attach to an element in a template.
+    This variable can then be used to reference the element or the element's value in the template.
+-->
